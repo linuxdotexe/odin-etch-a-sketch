@@ -27,8 +27,18 @@ function createCells() {
       cell.className = "cell";
       cell.style.cssText = `width: calc((960px - 30px) / ${GRID_SIZE}); height: calc((960px - 30px) / ${GRID_SIZE});`;
       cell.addEventListener("mouseover", () => {
-        let colors = [];
-        cell.style.backgroundColor = "pink";
+        let colors = [
+          "#fb4934",
+          "#b8bb26",
+          "#fabd2f",
+          "#83a598",
+          "#d3869b",
+          "#8ec07c",
+        ];
+        if (cell.style.backgroundColor == "") {
+          cell.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+        }
       });
       allRows[i].append(cell);
     }
