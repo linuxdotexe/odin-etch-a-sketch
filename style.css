@@ -1,0 +1,18 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 960px;
+  height: 960px;
+}
+
+.row {
+  display: flex;
+  gap: 2px;
+}
+.cell {
+  box-sizing: content-box;
+  border: 2px solid black;
+  /* width: 58.125px;
+  height: 58.125px; */
+}
